@@ -10,14 +10,15 @@ https://github.com/rails/dynamic_form
 === How to use it
 
 In a view
-= form_for(@post) do |f|
-  f.sortable_error_messages(:fields => [:title, :author, :desc])
+  = form_for(@post) do |f|
+    f.sortable_error_messages(:fields => [:title, :author, :desc])
 
-  ...
+    ...
 
 It might be a good idea to put fields array into separate module or class.
 
 If you using some nested fields you can set the field name as :'post.user_email'
+
 == Copyright
 
 Copyright (c) 2012 Bogdan Kulbida. See LICENSE.txt for
