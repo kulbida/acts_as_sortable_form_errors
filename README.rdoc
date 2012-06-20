@@ -1,17 +1,23 @@
-= acts_as_sortable_form_errors
+== Acts As Sortable Form Errors
 
-Description goes here.
+=== Installstion
+gem 'acts_as_sortable_form_errors', :git => 'git://github.com/kulbida/acts_as_sortable_form_errors.git'
 
-== Contributing to acts_as_sortable_form_errors
- 
-* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
-* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it.
-* Fork the project.
-* Start a feature/bugfix branch.
-* Commit and push until you are happy with your contribution.
-* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
-* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
+=== Dependencies
+This gem depends on dynamic_form gem. Please make sure you have installed dynamic_form gem first.
+https://github.com/rails/dynamic_form
 
+=== How to use it
+
+In a view
+= form_for(@post) do |f|
+  f.sortable_error_messages(:fields => [:title, :author, :desc])
+
+  ...
+
+It might be a good idea to put fields array into separate module or class.
+
+If you using some nested fields you can set the field name as :'post.user_email'
 == Copyright
 
 Copyright (c) 2012 Bogdan Kulbida. See LICENSE.txt for
